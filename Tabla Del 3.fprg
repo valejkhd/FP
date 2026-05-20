@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tabla del 3"/>
+        <attribute name="authors" value="ep0027la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-29 07:21:20 p.&#160;m."/>
+        <attribute name="created" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDQtMjk7MDY6NTU6MzEgcC7CoG0uOzI0NTE="/>
+        <attribute name="edited" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDQtMjk7MDc6MjE6MjAgcC7CoG0uOzE7MjU1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <for variable="I" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;3* &quot; &amp; I &amp; &quot;=&quot; &amp; (3*I)" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

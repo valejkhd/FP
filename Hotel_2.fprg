@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Hotel_2"/>
+        <attribute name="authors" value="ep0027la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 04:01:53 p.&#160;m."/>
+        <attribute name="created" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDQtMTU7MDY6NDA6MjcgcC7CoG0uOzI0NDU="/>
+        <attribute name="edited" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDUtMDY7MDQ6MDE6NTMgcC7CoG0uOzI7MjU0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Total, TotalComidas" type="Real" array="False" size=""/>
+            <declare name="Aire, Ventilador, Suite, Opcion" type="String" array="False" size=""/>
+            <declare name="NA, NV, NS, TotalH" type="Integer" array="False" size=""/>
+            <input variable="NV"/>
+            <input variable="NA"/>
+            <input variable="NS"/>
+            <assign variable="TotalH" expression="NV+NA+NS"/>
+            <input variable="Opcion"/>
+            <if expression="TotalH=0">
+                <then>
+                    <output expression="&quot;Error&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="Total" expression="NA*90000+NV*70000+NS*100000"/>
+                    <if expression="Opcion=&quot;S&quot;">
+                        <then>
+                            <assign variable="TotalComidas" expression="TotalH*30000"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="TotalH&gt;=7">
+                        <then>
+                            <assign variable="Total" expression="(Total*0.85)+TotalComidas"/>
+                        </then>
+                        <else>
+                            <assign variable="Total" expression="Total+TotalComidas"/>
+                        </else>
+                    </if>
+                    <output expression="Total" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

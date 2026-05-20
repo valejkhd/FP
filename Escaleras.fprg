@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Espirales"/>
+        <attribute name="authors" value="ep0027la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-29 09:16:25 p.&#160;m."/>
+        <attribute name="created" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDQtMjk7MDc6NDE6MTIgcC7CoG0uOzI0NDY="/>
+        <attribute name="edited" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDQtMjk7MDk6MTY6MjUgcC7CoG0uOzI7MjU2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Cantidad, I, S" type="Integer" array="False" size=""/>
+            <input variable="Cantidad"/>
+            <for variable="I" start="1" end="Cantidad" direction="inc" step="1">
+                <assign variable="S" expression="I*20"/>
+                <forward expression="20" pen="down"/>
+                <turn expression="90" rotate="right"/>
+                <forward expression="20" pen="down"/>
+                <turn expression="90" rotate="left"/>
+            </for>
+            <turn expression="180" rotate="right"/>
+            <forward expression="S" pen="down"/>
+            <turn expression="90" rotate="right"/>
+            <forward expression="S" pen="down"/>
+        </body>
+    </function>
+</flowgorithm>

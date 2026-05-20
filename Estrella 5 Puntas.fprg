@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Estrella 5 puntas"/>
+        <attribute name="authors" value="ep0027la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 03:31:26 p.&#160;m."/>
+        <attribute name="created" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDUtMDY7MDM6MDA6MzkgcC7CoG0uOzI0NDI="/>
+        <attribute name="edited" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDUtMDY7MDM6MzE6MjYgcC7CoG0uOzE7MjU1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="E" type="Integer" array="False" size=""/>
+            <turn expression="18" rotate="right"/>
+            <for variable="E" start="1" end="5" direction="inc" step="1">
+                <forward expression="100" pen="down"/>
+                <turn expression="144" rotate="right"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

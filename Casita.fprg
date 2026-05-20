@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Casita"/>
+        <attribute name="authors" value="ep0027la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 08:36:39 p.&#160;m."/>
+        <attribute name="created" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDUtMDY7MDY6MzY6NDkgcC7CoG0uOzI0NTU="/>
+        <attribute name="edited" value="ZXAwMDI3bGE7VkFMOzIwMjYtMDUtMDY7MDg6MzY6MzkgcC7CoG0uOzE7MjU2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Ancho, Alto, Tama&#241;o" type="Real" array="False" size=""/>
+            <declare name="J" type="Integer" array="False" size=""/>
+            <assign variable="Tama&#241;o" expression="random(100)"/>
+            <assign variable="Alto" expression="Tama&#241;o*10"/>
+            <assign variable="Ancho" expression="Tama&#241;o*10"/>
+            <call expression="HacerCasa(Alto, Ancho)"/>
+        </body>
+    </function>
+    <function name="HacerCasa" type="None" variable="">
+        <parameters>
+            <parameter name="Alto" type="Real" array="False"/>
+            <parameter name="Ancho" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <call expression="HacerRectangulo(Alto, Ancho)"/>
+            <forward expression="Alto" pen="down"/>
+            <turn expression="30" rotate="right"/>
+            <forward expression="Alto" pen="down"/>
+            <turn expression="120" rotate="right"/>
+            <forward expression="Alto" pen="down"/>
+            <turn expression="30" rotate="right"/>
+        </body>
+    </function>
+    <function name="HacerRectangulo" type="None" variable="">
+        <parameters>
+            <parameter name="Alto" type="Real" array="False"/>
+            <parameter name="Ancho" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="J" type="Integer" array="False" size=""/>
+            <for variable="J" start="1" end="2" direction="inc" step="1">
+                <forward expression="Alto" pen="down"/>
+                <turn expression="90" rotate="right"/>
+                <forward expression="Ancho" pen="down"/>
+                <turn expression="90" rotate="right"/>
+                <forward expression="Alto" pen="down"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
